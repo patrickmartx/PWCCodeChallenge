@@ -9,7 +9,8 @@ public class Main {
 		System.out.println();
 		
 		// Desafio 2
-		
+		String secondInput = "Hello, World!";
+		operacaoEmString.printaSemRepeticaoDeCaractere(secondInput);
 	}
 
 }
