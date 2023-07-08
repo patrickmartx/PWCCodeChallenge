@@ -1,7 +1,10 @@
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello, world!");
+		// Desafio 1
+		String firstInput = "Hello, World! OpenAI is amazing.";
+		manipulaString.printaEmOrdemInvertida(firstInput);
+		System.out.println("Certo");
 
 	}
 
