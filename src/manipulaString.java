@@ -1,4 +1,8 @@
+import java.util.Map;
+import java.util.HashMap;
+
 public class manipulaString implements ImanipulaString {
+	// @author Patrick Martins
 	
 	public void manipulaString() {};
 	
@@ -49,6 +53,7 @@ public class manipulaString implements ImanipulaString {
 	@Override
 	public void printaSubstringPalindromaMaisLonga(String frase) {
 		String maiorPalindromo = "";
+		
         for (int letraInicial = 0; letraInicial < frase.length(); letraInicial++) {
             for (int letraFinal = letraInicial + 1; letraFinal <= frase.length(); letraFinal++) {
             	// Cria um texto que inicia na letraInicial e termina em letraFinal e compara se esse subtexto é um palindromo e se ele tem mais letras do que o palíndromo já adicionado.
@@ -58,7 +63,6 @@ public class manipulaString implements ImanipulaString {
                 }
             }
         }
-
         System.out.println(maiorPalindromo);
 	}
 	
@@ -86,4 +90,25 @@ public class manipulaString implements ImanipulaString {
 		System.out.println(fraseCapitalizada);
 	}
 	
+	// Desafio 5
+	@Override
+	public void verificaSeEAnagramaDePalindromo(String frase) {
+		Map<Character, Integer> contadorDeCaracteres = new HashMap<>();
+		
+		for (char letra : frase.toLowerCase().toCharArray()) {
+			// Conta quantas repetições do caractere tem em contadorDeCaracteres. Caso já exista, acrescenta mais 1. Caso não exista, inicia com 1.
+			if (letra != ' ') {
+				contadorDeCaracteres.put(letra, contadorDeCaracteres.getOrDefault(letra, 0) + 1);
+			}
+		}
+		
+		// Conta quantas repetições ímpares de caractere ocorrem na palavra ou frase. Caso ocorra mais de uma vez, não é possível ser um palíndromo.
+		int quantidadeDeRepeticaoImparDeCaracteres = 0;
+		for (int quantidadeDeCaracteres : contadorDeCaracteres.values()) {
+			if (quantidadeDeCaracteres % 2 == 1) {
+				quantidadeDeRepeticaoImparDeCaracteres++;
+			}
+		}
+		System.out.println(quantidadeDeRepeticaoImparDeCaracteres <= 1);
+	}
 }
