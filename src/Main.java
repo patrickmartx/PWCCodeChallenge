@@ -2,6 +2,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		manipulaString operacaoEmString = new manipulaString();
+		
 		// Desafio 1
 		String firstInput = "Hello, World! OpenAI is amazing.";
 		operacaoEmString.printaEmOrdemInvertida(firstInput);
@@ -23,6 +24,12 @@ public class Main {
 		// Desafio 4
 		String fourthInput = "hello. how are you? i'm fine, thank you.";
 		operacaoEmString.printaPrimeiraLetraCapitalizada(fourthInput);
+		
+		System.out.println();
+		
+		// Desafio 5
+		String fifthInput = "r a c ecar";
+		operacaoEmString.verificaSeEAnagramaDePalindromo(fifthInput);
 	}
 
 }
