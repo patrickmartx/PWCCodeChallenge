@@ -28,8 +28,41 @@ public class manipulaString implements ImanipulaString {
 		System.out.println(fraseSemRepeticao);
 	}
 	
+	// Desafio 3
+	public boolean eUmPalindromo(String caracteres) {
+		/*
+		 * Método para descobrir se a palavra ou frase é um palíndromo.
+		 */
+		int posicaoLetraAEsquerda = 0;
+		int posicaoLetraADireita = caracteres.length() - 1;
+		
+		while (posicaoLetraAEsquerda < posicaoLetraADireita) {
+			if (caracteres.charAt(posicaoLetraAEsquerda) != caracteres.charAt(posicaoLetraADireita)) {
+				return false;
+			}
+			posicaoLetraAEsquerda++;
+			posicaoLetraADireita--;
+		}
+		return true;
+	}
 	
+	@Override
+	public void printaSubstringPalindromaMaisLonga(String frase) {
+		String maiorPalindromo = "";
+        for (int letraInicial = 0; letraInicial < frase.length(); letraInicial++) {
+            for (int letraFinal = letraInicial + 1; letraFinal <= frase.length(); letraFinal++) {
+            	// Cria um texto que inicia na letraInicial e termina em letraFinal e compara se esse subtexto é um palindromo e se ele tem mais letras do que o palíndromo já adicionado.
+                String substexto = frase.substring(letraInicial, letraFinal).toLowerCase();
+                if (eUmPalindromo(substexto) && substexto.length() > maiorPalindromo.length()) {
+                    maiorPalindromo = substexto;
+                }
+            }
+        }
+
+        System.out.println(maiorPalindromo);
+	}
 	
+	// Desafio 4
 	@Override
 	public void printaPrimeiraLetraCapitalizada(String frase) {
 		StringBuilder fraseCapitalizada = new StringBuilder();
@@ -52,4 +85,5 @@ public class manipulaString implements ImanipulaString {
 		}
 		System.out.println(fraseCapitalizada);
 	}
+	
 }
