@@ -15,7 +15,8 @@ public class Main {
 		System.out.println();
 		
 		// Desafio 3
-		
+		String thirdInput = "babad";
+		operacaoEmString.printaSubstringPalindromaMaisLonga(thirdInput);
 		
 		System.out.println();
 		
