@@ -4,7 +4,7 @@ public interface ImanipulaString {
 	// Desafio 2
 	public void printaSemRepeticaoDeCaractere(String frase);
 	// Desafio 3
-	
+	public void printaSubstringPalindromaMaisLonga(String frase);
 	// Desafio 4
 	public void printaPrimeiraLetraCapitalizada(String frase);
 }
