@@ -1,35 +1,35 @@
 public class Main {
 
 	public static void main(String[] args) {
-		manipulaString operacaoEmString = new manipulaString();
+		manipulateString stringOp = new manipulateString();
 		
 		// Desafio 1
 		String firstInput = "Hello, World! OpenAI is amazing.";
-		operacaoEmString.printaEmOrdemInvertida(firstInput);
+		stringOp.printInReverseOrder(firstInput);
 		
 		System.out.println();
 		
 		// Desafio 2
 		String secondInput = "Hello, World!";
-		operacaoEmString.printaSemRepeticaoDeCaractere(secondInput);
+		stringOp.printNoRepeatChar(secondInput);
 		
 		System.out.println();
 		
 		// Desafio 3
 		String thirdInput = "babad";
-		operacaoEmString.printaSubstringPalindromaMaisLonga(thirdInput);
+		stringOp.printSubstringLongestPalindrome(thirdInput);
 		
 		System.out.println();
 		
 		// Desafio 4
 		String fourthInput = "hello. how are you? i'm fine, thank you.";
-		operacaoEmString.printaPrimeiraLetraCapitalizada(fourthInput);
+		stringOp.capitalizeFirstLetter(fourthInput);
 		
 		System.out.println();
 		
 		// Desafio 5
-		String fifthInput = "r a c ecar";
-		operacaoEmString.verificaSeEAnagramaDePalindromo(fifthInput);
+		String fifthInput = "racecar";
+		stringOp.isAnagramOfPalindrome(fifthInput);
 	}
 
 }
