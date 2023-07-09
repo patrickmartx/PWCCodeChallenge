@@ -7,4 +7,6 @@ public interface ImanipulaString {
 	public void printaSubstringPalindromaMaisLonga(String frase);
 	// Desafio 4
 	public void printaPrimeiraLetraCapitalizada(String frase);
+	// Desafio 5
+	public void verificaSeEAnagramaDePalindromo(String frase);
 }
